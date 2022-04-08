@@ -5,28 +5,29 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success/correcet)
+ * Return: Always 0.
  */
 
 int main(void)
 {
-int n:
+int n;
 
 srand(time(0));
-n = rand() -RAND_MAX / 2;
+n = rand() - RAND_MAX / 2;
 
 if (n==0)
 {
-printf("xi is zero\n',n);
+printf("%i is zero\n", n);
 }
 
 else if  (n<0)
-{printf("xi is negative\n',n);
+{
+printf("%i is negative\n", n);
 }
 
 else
 {
-printf("xi is positive\n",n);
+printf("%i is positive\n", n);
 }
 return (0);
 
