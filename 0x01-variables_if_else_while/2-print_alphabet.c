@@ -1,18 +1,21 @@
 #include <stdio.h>
 /**
- * Main - entry point
+ * main - entry point
  *
- * Description: Pint the lowercase alphabet
- * Return: 0
+ * Return: Always 0 (success/correct)
  */
 int main(void)
-{
-int c;
 
-for (c = 0; c < 26; ++c)
-putchar('n' + c);
+{
+char alphabe;
+
+for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+{
+putchar(alphabet);
+}
 
 putchar('\n');
 
 return (0);
+
 }
