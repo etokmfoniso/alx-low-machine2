@@ -8,36 +8,36 @@ i#include "main.h"
 
 int **alloc_grid(int width, int height)
 {
-/*Declaring variables*/
-int **grid;
-int i, j;
+	int **twoD;
+	int hgt_index, wid_index;
 
-if (width <= 0 || height <= 0)
-{
-return (NULL);
-}
+	if (width <= 0 || height <= 0)
+		return (NULL);
 
-grid = malloc(sizeof(int *) * height); /*malloc*/
+	twoD = malloc(sizeof(int *) * height);
 
-if (grid == NULL)
-{
-return (NULL);
-}
+	if (twoD == NULL)
+		return (NULL);
 
-for (i = 0; i < height; i++)
-{
-grid[i] = malloc(sizeof(int) * width);
-if (grid[i] == NULL)
-{
-for (i = i - 1; i >= 0; i--)
-{
-free(grid[i]);
-}
-free(grid);
-return (NULL);
-}
-}
-for (i = 0; j < width; j++)
-grid[i][j] = 0;
-return (grid);
+	for (hgt_index = 0; hgt_index < height; hgt_index++)
+	{
+		twoD[hgt_index] = malloc(sizeof(int) * width);
+
+		if (twoD[hgt_index] == NULL)
+		{
+			for (; hgt_index >= 0; hgt_index--)
+				free(twoD[hgt_index]);
+
+			free(twoD);
+			return (NULL);
+		}
+	}
+
+	for (hgt_index = 0; hgt_index < height; hgt_index++)
+	{
+		for (wid_index = 0; wid_index < width; wid_index++)
+			twoD[hgt_index][wid_index] = 0;
+	}
+
+	return (twoD);
 }
