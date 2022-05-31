@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * set_bit - Sets the value of a bit at a given index to 1.
- * @n: A pointer to the bit.
- * @index: The index to set the value at - indices start at 0.
+ * get_bit - Gets the value of a bit at a given index.
+ * @n: The bit.
+ * @index: The index to get the value at - indices start at 0.
  *
  * Return: If an error occurs - -1.
- *         Otherwise - 1.
+ *         Otherwise - The value of bit at index.
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
